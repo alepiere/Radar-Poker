@@ -1,0 +1,15 @@
+{
+  "name": "radar-poker",
+  "version": "1.0.0",
+  "description": "Welcome to the official repo for the Radar Poker Website! This site is being developed to serve as the online hub for Radar Poker, a coaching-for-profits (CFP) company dedicated to mentoring poker players with professional aspirations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^7.0.6"
+  }
+}
