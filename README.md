@@ -45,7 +45,7 @@ This project involves designing, developing, and launching the official Radar Po
 
 Made with ❤️ by Annie for Josh
 
- <p align="center">
+ <p>
 <pre>
   **     **
  *  *   *  *
