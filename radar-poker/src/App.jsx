@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import About from "./pages/About";
+import WhoWeWant from "./pages/WhoWeWant";
+import Testimonials from "./pages/Testimonials";
+import Contact from "./pages/Contact";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Router>
+      <nav style={{ display: "flex", gap: "1rem", padding: "1rem" }}>
+        <Link to="/">Home</Link>
+        <Link to="/about">About Us</Link>
+        <Link to="/whowewant">Who We Want</Link>
+        <Link to="/testimonials">Testimonials</Link>
+        <Link to="/contact">Contact Us</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<h1>Welcome to Radar Poker</h1>} />
+        <Route path="/about" element={<About />} />
+        <Route path="/whowewant" element={<WhoWeWant />} />
+        <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
